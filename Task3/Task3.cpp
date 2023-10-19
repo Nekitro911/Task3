@@ -172,9 +172,9 @@ void PrintInf(TInf* qHead, TInf* qTail)
 	cout << "Kollochestvo serii v spiske: " << SeriesNumber(qHead, qTail) << "\nKollichestvo sravnenii: " << compare << ", kollichestvo peresilok: " << fw << endl;
 }
 
-void Print(TInf** pqHead, TInf** pqTail, char* s)
+void Print(TInf** pqHead, TInf** pqTail, const char* s)
 {
-	cout << s << ":" << endl;
+	cout <<  s << ":" << endl;
 	PrintQueue(*pqHead, *pqTail);
 	cout << "\n";
 	PrintChecksum(*pqHead, *pqTail);
@@ -195,6 +195,11 @@ int main()
 	cin >> N;
 	system("cls");
 	RandomQueue(&qHead, &qTail);
+	/*Print(&qHead, &qTail);
+	AscQueue(&qHead, &qTail);
+	Print(&qHead, &qTail);
+	DescQueue(&qHead, &qTail);
+	Print(&qHead, &qTail);*/
 	Print(&qHead, &qTail, "\n1) Random posledovatelnost");
 	AscQueue(&qHead, &qTail);
 	Print(&qHead, &qTail, "\n2) Uporadochennaia posledovatelnost po vozrastaniy");
